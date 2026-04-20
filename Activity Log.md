@@ -1,4 +1,4 @@
-#April 20
+April 20
 -
 ```
 - Set up project structure and main menu
