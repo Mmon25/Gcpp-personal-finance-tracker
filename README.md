@@ -1,7 +1,7 @@
 # Personal Finance Tracker (C++)
 
 ## Description
-A simple C++ program that allows users to track income, expenses, and view their current balance
+This is a simple C++ program that allows users to track income, expenses, and view their current balance
 
 ## Installation & Usage
 1. Clone the repository
