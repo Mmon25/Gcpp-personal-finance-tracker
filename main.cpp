@@ -1,22 +1,38 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
-double userIncome, userExpense, userBal = 0;
+double userBal = 0;
 
 
 
- /*Add income function
-    int getIncome(int income){
-        cout << "Please enter your income: ";
-        cin >>
-    }*/
+ 
+    double addIncome(double income){ // Add new income
+
+        userBal += income;
+
+        return userBal;
+    }
+
+    double addExpense(double expense){ // Add new expense
+        userBal -= expense;
+
+        return userBal;
+    }
+
+    void displayBalance(){ // Display current balance
+
+        cout << "Your current balance: $" << userBal << "\n\n";
+    
+    }
 
 
 
 int main(){
     
+    double userIncome, userExpense;
     int userChoice;
     
     
@@ -36,27 +52,29 @@ int main(){
             cout << "Please choose option 1 to 4: ";
             cin >> userChoice;
         }
-        
+
+        cout << fixed << setprecision(2);
+
         if (userChoice == 1){
             
             cout << "Please enter your income: $";
             cin >> userIncome;
-            userBal += userIncome;
+            addIncome(userIncome); // Call add income function
             cout << "\n";
-            
         }
         else if (userChoice == 2){
             cout << "Please enter your new expense: $";
             cin >> userExpense;
             
-            userBal -= userExpense;
+            addExpense(userExpense); // Call add expense function
             cout << "\n";
         }
         else if (userChoice == 3){
-            cout << "Your current balance: $" << userBal << "\n\n";
+
+            displayBalance(); // Call display balance function
         }
         else{
-            cout << "Goodbye.";
+            cout << "Goodbye."; // Exit
         }
         
     } while (userChoice != 4);
