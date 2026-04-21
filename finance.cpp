@@ -1,9 +1,8 @@
-// finance.cpp
 // Contains function definitions for finance.h
 // Contains function implementations for addIncome, addExpense, and displayBalance
 #include <iostream>
 #include <iomanip>
-#include "finance.h" // Inclue header to access function declarations
+#include "finance.h" // Include header to access function declarations
 
 using namespace std;
 
