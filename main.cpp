@@ -1,4 +1,4 @@
-//main.cpp
+// main.cpp
 // Handles user input, menu, and controls program flow
 #include <iostream>
 #include <iomanip>
