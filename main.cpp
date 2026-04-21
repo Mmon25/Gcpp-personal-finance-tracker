@@ -3,42 +3,41 @@
 #include <iomanip>
 
 using namespace std;
-
-double userBal = 0;
-
-
-
  
-    double addIncome(double income){ // Add new income
+    // double userBal passed by reference so functions can modify original value
 
-        userBal += income;
+    void addIncome(double newIncome, double &userBal){ // newIncome passed by value, userBal by reference to update original value
+        
+        userBal += newIncome; // Apply new income to update balance value
 
-        return userBal;
+        cout << "\n";
     }
 
-    double addExpense(double expense){ // Add new expense
-        userBal -= expense;
+    void addExpense(double newExpense, double &userBal){ // newExpense passed by value, userBal by reference to update original value
+        
+        userBal -= newExpense; // Apply new expense to update balance value
 
-        return userBal;
+        cout << "\n";
     }
 
-    void displayBalance(){ // Display current balance
+    void displayBalance(double userBal){ // userBal passed by value since this function does not require modification of original value
 
-        cout << "Your current balance: $" << userBal << "\n\n";
-    
+        cout << "\n\tYour current balance: $" << userBal << endl; // Output balance
     }
 
 
 
 int main(){
     
-    double userIncome, userExpense;
+    double userIncome, userExpense, userBal = 0;
     int userChoice;
     
     
     do{
+        cout << "========================" << endl;
         cout << "Personal Finance Tracker" << endl;
-        cout << "------------------------" << endl;
+        cout << "       Main Menu        " << endl;
+        cout << "========================" << endl;
         cout << "1. Add Income" << endl;
         cout << "2. Add Expense" << endl;
         cout << "3. View Balance" << endl;
@@ -57,24 +56,26 @@ int main(){
 
         if (userChoice == 1){
             
-            cout << "Please enter your income: $";
+            cout << "\n\tPlease enter your income: $";
             cin >> userIncome;
-            addIncome(userIncome); // Call add income function
+
+            addIncome(userIncome, userBal); // Call add income function
             cout << "\n";
         }
         else if (userChoice == 2){
-            cout << "Please enter your new expense: $";
+            cout << "\n\tPlease enter your new expense: $";
             cin >> userExpense;
             
-            addExpense(userExpense); // Call add expense function
+            addExpense(userExpense, userBal); // Call add expense function
             cout << "\n";
         }
         else if (userChoice == 3){
 
-            displayBalance(); // Call display balance function
+            displayBalance(userBal); // Call display balance function
+            cout << "\n";
         }
         else{
-            cout << "Goodbye."; // Exit
+            cout << "\n\tGoodbye." << endl; // Exit
         }
         
     } while (userChoice != 4);
