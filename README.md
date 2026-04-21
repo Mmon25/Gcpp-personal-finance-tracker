@@ -18,3 +18,11 @@ This is a simple C++ program that allows users to track income, expenses, and vi
 ## Updates / Progress
 - Initial version with menu and balance tracking
 - Refactored into multi-file structure (main, finance.cpp, finance.h)
+
+## Future Improvements
+- Add transaction history tracking
+- Implement file saving for persistent data
+- Add categories for expenses
+
+### Development Journey
+This project is part of my journey learning C++ and software development. It is being built incrementally with a focus on clean structure and real-world practices.
