@@ -24,5 +24,5 @@ This is a simple C++ program that allows users to track income, expenses, and vi
 - Implement file saving for persistent data
 - Add categories for expenses
 
-## Development Journey
-This project is part of my journey learning C++ and software development. It is being built incrementally with a focus on clean structure and real-world practices.
+## Why this Project Exists
+This project is part of my journey learning C++ and software development. It is being built incrementally with a focus on clean structure and real-world application & practices.
