@@ -10,3 +10,11 @@ April 20
 - Applicable functions pass user balance variable by reference to modify its original value
 - Updated output display & formatting
 ```
+
+April 21
+-
+```
+- Created a feature branch for multi-file refactor
+- Refactored project to multi-file structure (main.cpp, finance.cpp, finance.h)
+- Merged feature branch into main
+```
