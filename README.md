@@ -4,11 +4,11 @@
 This is a simple C++ program that allows users to track income, expenses, and view their current balance.
 
 ## Features
+- Menu-driven interface
 - Add income
 - Add expenses
 - View current balance
 - View transaction history
-- Menu-driven interface
 
 ## Installation & Usage
 1. Clone the repository
