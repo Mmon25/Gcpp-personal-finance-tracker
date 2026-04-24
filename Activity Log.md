@@ -18,3 +18,13 @@ April 21
 - Refactored project to multi-file structure (main.cpp, finance.cpp, finance.h)
 - Merged feature branch into main
 ```
+
+April 23
+-
+```
+- Created a feature branch for transaction history system
+- Built vector to store income and expenses for tracking transaction history
+- Built function to handle transaction history
+- Utilized string streams (ostringstream) for formatted output
+- Applied header guards to finance.h to avoid multiple inclusion errors
+```
