@@ -16,7 +16,7 @@ April 21
 ```
 - Created a feature branch for multi-file refactor
 - Refactored project to multi-file structure (main.cpp, finance.cpp, finance.h)
-- Merged feature branch into main
+- Tested and merged feature branch into main
 ```
 
 April 23
@@ -27,4 +27,5 @@ April 23
 - Built function to handle transaction history
 - Utilized string streams (ostringstream) for formatted output
 - Applied header guards to finance.h to avoid multiple inclusion errors
+- Tested and merged feature branch into main
 ```
