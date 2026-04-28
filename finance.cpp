@@ -37,6 +37,7 @@ using namespace std;
 
         cout << fixed << setprecision (2);
         cout << "\n\tYour current balance: $" << userBal << endl; // Output balance
+        cout << "\n";
     }
 
     void displayHistory(const vector<string> &history){
@@ -45,6 +46,7 @@ using namespace std;
         cout << "-------------------" << endl;
         for (int i = 0; i < history.size(); i++){ // Print transaction history
             cout << history[i] << endl;
+            cout << "\n";
         }
 
     }

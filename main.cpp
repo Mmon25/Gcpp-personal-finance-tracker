@@ -28,41 +28,46 @@ int main(){
         cout << "5. Quit" << endl; 
         cout << "------------------------" << endl;
         
-        cout << "\nPlease choose an option from the following menu: ";
+        cout << "\nSelect an item from the menu above: ";
         cin >> userChoice;
         
-        while (userChoice != 1 && userChoice != 2 && userChoice != 3 && userChoice != 4 && userChoice != 5){
+        while (userChoice < 1 || userChoice > 5){
             cout << "Please choose option 1 to 5: ";
             cin >> userChoice;
         }
 
         cout << fixed << setprecision(2);
 
-        if (userChoice == 1){
-            cout << "\n\tPlease enter your income: $";
-            cin >> userIncome;
+        switch (userChoice){
+            case 1:
+                cout << "\n\tPlease enter your income: $";
+                cin >> userIncome;
+                addIncome(userIncome, userBal, transHistory); // Call add income function
+                cout << "\n";
+                break;
 
-            addIncome(userIncome, userBal, transHistory); // Call add income function
-            cout << "\n";
-        }
-        else if (userChoice == 2){
-            cout << "\n\tPlease enter your new expense: $";
-            cin >> userExpense;
+            case 2:
+                cout << "\n\tPlease enter your new expense: $";
+                cin >> userExpense;
             
-            addExpense(userExpense, userBal, transHistory); // Call add expense function
-            cout << "\n";
-        }
-        else if (userChoice == 3){
+                addExpense(userExpense, userBal, transHistory); // Call add expense function
+                cout << "\n";
+                break;
 
-            displayBalance(userBal); // Call display balance function
-            cout << "\n";
-        }
-        else if (userChoice == 4){
-            displayHistory(transHistory); // Call transaction history function
-            cout << "\n";
-        }
-        else{
-            cout << "\n\tGoodbye." << endl; // Exit
+            case 3:
+                displayBalance(userBal); // Call display balance function
+                cout << "\n";
+                break;
+
+            case 4:
+                displayHistory(transHistory); // Call transaction history function
+                cout << "\n";
+                break;
+
+            case 5:
+                cout << "Goodbye" << endl;
+                break;
+                
         }
         
     } while (userChoice != 5);
