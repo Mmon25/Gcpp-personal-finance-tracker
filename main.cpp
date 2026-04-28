@@ -30,11 +30,6 @@ int main(){
         
         cout << "\nSelect an item from the menu above: ";
         cin >> userChoice;
-        
-        while (userChoice < 1 || userChoice > 5){
-            cout << "Please choose option 1 to 5: ";
-            cin >> userChoice;
-        }
 
         cout << fixed << setprecision(2);
 
@@ -65,12 +60,13 @@ int main(){
                 break;
 
             case 5:
-                cout << "Goodbye" << endl;
+                cout << "\nGoodbye.\n";
                 break;
-                
+            
+            default:
+                cout << "\nInvalid entry.\n\n\n";
+                break;
         }
-        
     } while (userChoice != 5);
-    
     return 0;
 }
