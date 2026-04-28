@@ -1,19 +1,14 @@
-// main.cpp
-// Handles user input, menu, and controls program flow
 #include <iostream>
 #include <iomanip>
 #include <vector>
 #include <string>
 #include "finance.h" // Include header to access function declarations
-
 using namespace std;
 
-
-int main(){
+int main(){ // Handles user input, menu, and controls program flow
     
     double userIncome, userExpense, userBal = 0;
     int userChoice;
-
     vector<string> transHistory;
     
     do{
@@ -32,7 +27,7 @@ int main(){
         cin >> userChoice;
 
         cout << fixed << setprecision(2);
-
+        
         switch (userChoice){
             case 1:
                 cout << "\n\tPlease enter your income: $";
@@ -60,11 +55,11 @@ int main(){
                 break;
 
             case 5:
-                cout << "\nGoodbye.\n";
+                cout << "\nGoodbye.\n"; // Exit
                 break;
             
             default:
-                cout << "\nInvalid entry.\n\n\n";
+                cout << "\nInvalid selection. Try again.\n"; // Safety case
                 break;
         }
     } while (userChoice != 5);
